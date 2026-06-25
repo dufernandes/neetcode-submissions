@@ -100,5 +100,3 @@ The two-pointer solution is preferred in interviews — same O(n) time, but O(1)
 - Use `Character.isLetterOrDigit()` — don't write your own alphanumeric check.
 - Use `Character.toLowerCase()` — don't convert the whole string upfront.
 - Edge cases worth mentioning: empty string (returns `true`), single character (returns `true`), all non-alphanumeric characters (returns `true` — empty after cleaning).
-
----
