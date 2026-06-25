@@ -98,9 +98,3 @@ Every problem README follows the same structure:
 6. **Complexity** — time and space for each approach
 7. **Interview Tips** — what interviewers look for, common mistakes, follow-ups
 8. **Review Log** — date solved and review due date for spaced re-solving
-
----
-
-## Retention Strategy
-
-No flashcards. After solving a problem, log it in [`review_log.md`](review_log.md) with a review date 3-4 weeks out. Re-solve it cold on that date — no looking at the previous solution first. If you can do it, you know it. If you can't, re-learn it from the source.
