@@ -1,72 +1,76 @@
-# NeetCode Solutions — @dufernandes
+# NeetCode Solutions — Java
 
-> Synced automatically from [NeetCode.io](https://neetcode.io) · Repository: `neetcode-submissions`
-
----
-
-## What is this?
-
-[NeetCode.io](https://neetcode.io) is a coding interview preparation platform featuring curated problems, video solutions, and an in-browser code editor. This repository is automatically populated with your accepted (or all) solutions using the **GitHub Sync** feature.
+> **Language:** Java 21  
+> **Source:** [NeetCode 150](https://neetcode.io/practice) · auto-synced via GitHub integration  
+> **Author:** [@dufernandes](https://github.com/dufernandes)
 
 ---
 
-## How GitHub Sync works
+## Solutions
 
-1. **Connect your GitHub account** on [neetcode.io/profile/github](https://neetcode.io/profile/github).
-2. **Auto-commit** — every time you submit a solution on NeetCode, it is pushed here automatically (configurable by status).
-3. **Bulk Sync** — push all your past solutions at once from the GitHub settings page.
-4. **Manual sync** — from the submission history panel on any problem page, sync or remove individual submissions.
+| Problem | Difficulty | Pattern | My README |
+|---|---|---|---|
+| [Dynamic Array](https://neetcode.io/problems/dynamic-array) | Easy | Data Structure Implementation | [📄](Data%20Structures%20%26%20Algorithms/dynamicArray/README.md) |
+| [Duplicate Integer](https://neetcode.io/problems/duplicate-integer) | Easy | Hash Map Lookup | [📄](Data%20Structures%20%26%20Algorithms/duplicate-integer/README.md) |
+| [Is Anagram](https://neetcode.io/problems/is-anagram) | Easy | Hash Map Lookup | [📄](Data%20Structures%20%26%20Algorithms/is-anagram/README.md) |
+| [Two Integer Sum](https://neetcode.io/problems/two-integer-sum) | Easy | Hash Map Lookup | [📄](Data%20Structures%20%26%20Algorithms/two-integer-sum/README.md) |
+| [Anagram Groups](https://neetcode.io/problems/anagram-groups) | Medium | Hash Map Lookup | [📄](Data%20Structures%20%26%20Algorithms/anagram-groups/README.md) |
+| [Longest Consecutive Sequence](https://neetcode.io/problems/longest-consecutive-sequence) | Medium | Hash Map Lookup | [📄](Data%20Structures%20%26%20Algorithms/longest-consecutive-sequence/README.md) |
+| [Products of Array Excluding Self](https://neetcode.io/problems/products-of-array-discluding-self) | Medium | Prefix / Postfix | [📄](Data%20Structures%20%26%20Algorithms/products-of-array-discluding-self/README.md) |
+| [String Encode and Decode](https://neetcode.io/problems/string-encode-and-decode) | Medium | Custom Serialization | [📄](Data%20Structures%20%26%20Algorithms/string-encode-and-decode/README.md) |
+| [Top K Elements in List](https://neetcode.io/problems/top-k-elements-in-list) | Medium | Top-K / Heap | [📄](Data%20Structures%20%26%20Algorithms/top-k-elements-in-list/README.md) |
+| [Valid Sudoku](https://neetcode.io/problems/valid-sudoku) | Medium | Hash Map Lookup / Matrix | [📄](Data%20Structures%20%26%20Algorithms/valid-sudoku/README.md) |
 
 ---
 
-## Repository structure
+## Patterns Covered
 
-Solutions are organized by topic folder, then problem ID. Each submission is stored as a separate file:
+### Hash Map Lookup
+The dominant pattern in this set. The core idea: trade O(n) space for O(1) lookups, turning O(n²) brute-force solutions into O(n).
+
+Appears in: Two Sum, Contains Duplicate, Valid Anagram, Group Anagrams, Longest Consecutive Sequence, Valid Sudoku.
+
+### Prefix / Postfix Products
+For each position, the answer depends on everything to its left and everything to its right — computed independently in two passes.
+
+Appears in: Product of Array Except Self.
+
+### Top-K Elements (Heap)
+Maintain a min-heap of size k. Every new element evicts the current minimum if it's larger, keeping only the k largest candidates.
+
+Appears in: Top K Frequent Elements.
+
+### Custom Serialization
+Encode structured data into a flat string without ambiguity by prefixing lengths rather than relying on delimiters that may appear in the data itself.
+
+Appears in: String Encode and Decode.
+
+### Data Structure from Scratch
+Implement a resizable array with amortized O(1) pushback via capacity doubling.
+
+Appears in: Dynamic Array.
+
+---
+
+## Repository Structure
 
 ```
-<topic-folder>/
+Data Structures & Algorithms/
   <problem-id>/
-    submission-0.<ext>   ← first submission
-    submission-1.<ext>   ← second submission
-    ...
-```
-
-**Example:**
-```
-Data Structures & Algorithms/two-integer-sum/submission-0.py
-Data Structures & Algorithms/binary-search/submission-0.ts
-Python For Beginners/python-hello-world/submission-0.py
+    submission-N.java   ← all submissions (latest = highest N)
+    README.md           ← explanation, complexity, interview tips
+README.md               ← this file
 ```
 
 ---
 
-## Supported languages
+## How to Read Each README
 
-| Language | Extension |
-|---|---|
-| Python | `.py` |
-| JavaScript | `.js` |
-| TypeScript | `.ts` |
-| Java | `.java` |
-| C++ | `.cpp` |
-| C# | `.cs` |
-| Go | `.go` |
-| Rust | `.rs` |
-| Kotlin | `.kt` |
-| Swift | `.swift` |
-| SQL | `.sql` |
+Every problem README follows the same structure:
 
----
-
-## Settings
-
-Manage your sync preferences at [neetcode.io/profile/github](https://neetcode.io/profile/github):
-
-- **Auto-commit toggle** — enable or disable automatic commits on submission
-- **Status filter** — sync all submissions or accepted only
-- **Rename repository** — rename this repo or start fresh with a new one
-- **Bulk Sync** — push all past solutions at once (rate-limited)
-
----
-
-*Generated by [NeetCode GitHub Integration](https://neetcode.io)*
+1. **Problem** — what's being asked, with an example
+2. **Key Insight** — the single idea that unlocks the solution
+3. **Solution** — the submitted code, cleaned up with comments
+4. **Alternatives** — other valid approaches with tradeoff discussion
+5. **Complexity** — time and space for each approach
+6. **Interview Tips** — what interviewers look for, common mistakes, follow-ups
