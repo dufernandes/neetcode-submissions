@@ -1,33 +1,31 @@
-# Two Sum
+# Two Sum II (Two Integer Sum II)
 
-**Difficulty:** Easy  
-**Pattern:** Hash Map Lookup  
-**NeetCode:** [Two Integer Sum](https://neetcode.io/problems/two-integer-sum)  
-**LeetCode:** [#1 – Two Sum](https://leetcode.com/problems/two-sum/)
+**Difficulty:** Medium  
+**Pattern:** Two Pointers  
+**NeetCode:** [Two Integer Sum II](https://neetcode.io/problems/two-integer-sum-ii)  
+**LeetCode:** [#167 – Two Sum II – Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
 
 ---
 
 ## Problem
 
-Given an array of integers `nums` and a target integer `target`, return the indices of the two numbers that add up to `target`. Each input has exactly one solution, and you may not use the same element twice.
+Given a **1-indexed** sorted array `numbers`, return the indices of the two numbers that add up to `target`. There is exactly one solution. You may not use the same element twice. Must use O(1) extra space.
 
 ```
-Input:  nums = [2, 7, 11, 15], target = 9
-Output: [0, 1]   // nums[0] + nums[1] == 9
+Input:  numbers = [2, 7, 11, 15], target = 9
+Output: [1, 2]
+
+Input:  numbers = [2, 3, 4], target = 6
+Output: [1, 3]
 ```
 
 ---
 
 ## Key Insight
 
-For every number `x` in the array, its required complement is `target - x`. Instead of scanning the array again to find that complement (O(n) nested → O(n²) total), store each number's index in a HashMap as you go. On each step, check if the complement was already seen — if yes, you're done.
+The array is already sorted — use that. Place one pointer at each end. If the sum is too small, move `left` right to increase it. If too large, move `right` left to decrease it. The problem guarantees exactly one solution, so the pointers will always converge on it.
 
-```
-target = 9, nums = [2, 7, 11, 15]
-
-i=0: need 9-2=7 → not in map. Store {2:0}
-i=1: need 9-7=2 → found at index 0! Return [0, 1] ✓
-```
+This is the direct prerequisite to 3Sum — that problem reduces to running this algorithm once per element.
 
 ---
 
@@ -35,21 +33,50 @@ i=1: need 9-7=2 → found at index 0! Return [0, 1] ✓
 
 ```java
 class Solution {
-    public int[] twoSum(int[] nums, int target) {
-        Map<Integer, Integer> diffs = new HashMap<>();
-
-        for (int i = 0; i < nums.length; i++) {
-            int difference = target - nums[i];
-            if (diffs.containsKey(difference)) {
-                return new int[]{diffs.get(difference), i};
-            }
-            diffs.put(nums[i], i);
+    public int[] twoSum(int[] numbers, int target) {
+        int left = 0, right = numbers.length - 1;
+        while (left < right) {
+            int value = numbers[left] + numbers[right];
+            if (value == target) return new int[]{left + 1, right + 1};
+            else if (value < target) left++;
+            else right--;
         }
-
-        return null; // guaranteed to have a solution per problem constraints
+        return null; // guaranteed not to reach here
     }
 }
 ```
+
+> Note: Return `left + 1` and `right + 1` — the problem is 1-indexed. Easy to forget under pressure.
+
+---
+
+## Walk-through: `[2, 7, 11, 15]`, target = `9`
+
+```
+left=0 (2), right=3 (15) → sum=17 > 9 → right--
+left=0 (2), right=2 (11) → sum=13 > 9 → right--
+left=0 (2), right=1 (7)  → sum=9  = 9 → return [1, 2] ✓
+```
+
+---
+
+## Alternative: Brute Force (O(n²))
+
+Check every pair. Ignores the sorted property entirely.
+
+```java
+class Solution {
+    public int[] twoSum(int[] numbers, int target) {
+        for (int i = 0; i < numbers.length - 1; i++)
+            for (int j = i + 1; j < numbers.length; j++)
+                if (numbers[i] + numbers[j] == target)
+                    return new int[]{i + 1, j + 1};
+        return null;
+    }
+}
+```
+
+The two-pointer solution is preferred — same O(1) space, but O(n) vs O(n²) time.
 
 ---
 
@@ -57,19 +84,22 @@ class Solution {
 
 | | |
 |---|---|
-| **Time** | O(n) — single pass through the array |
-| **Space** | O(n) — HashMap stores at most n elements |
-
----
-
-## Why not sort + two pointers?
-
-Sorting is O(n log n) and, critically, **destroys the original indices** — which the problem requires you to return. The HashMap approach preserves indices and is faster.
+| **Time** | O(n) — each pointer moves at most n steps total |
+| **Space** | O(1) — two pointers only, no extra structure |
 
 ---
 
 ## Interview Tips
 
-- The naive O(n²) brute force (nested loops) is the starting point — mention it, then explain why the HashMap improves it.
-- The map key is the number **value**, and the value is its **index** — easy to mix up under pressure.
-- The check must come **before** the insert, otherwise a number might match itself (e.g. `target=6, num=3`).
+- The sorted precondition is the signal — always ask "is the array sorted?" in Two Sum variants. If yes, two pointers. If no, HashMap.
+- Don't forget the 1-indexed return — `left + 1` and `right + 1`, not `left` and `right`.
+- This problem is explicitly listed as a prerequisite for 3Sum on NeetCode. Make sure you can solve it in under 2 minutes before moving on.
+- The `return null` at the end is technically unreachable — the problem guarantees a solution exists — but include it to satisfy the compiler.
+
+---
+
+## Review Log
+
+| Date solved | Review due |
+|---|---|
+| — | — |
