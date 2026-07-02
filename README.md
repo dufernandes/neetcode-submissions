@@ -32,6 +32,7 @@ Problems are ordered following the [NeetCode 150 Roadmap](https://neetcode.io/pr
 | [Two Integer Sum II](https://neetcode.io/problems/two-integer-sum-ii) | Medium | Two Pointers | [📄](Data%20Structures%20%26%20Algorithms/two-integer-sum-ii/README.md) |
 | [Three Integer Sum](https://neetcode.io/problems/three-integer-sum) | Medium | Two Pointers | [📄](Data%20Structures%20%26%20Algorithms/three-integer-sum/README.md) |
 | [Container With Most Water](https://neetcode.io/problems/max-water-container) | Medium | Two Pointers | [📄](Data%20Structures%20%26%20Algorithms/max-water-container/README.md) |
+| [Trapping Rain Water](https://neetcode.io/problems/trapping-rain-water) | hard | Trapping Rain Water | [📄](Data%20Structures%20%26%20Algorithms/trapping-rain-water/REAME.md) |
 
 ### 🛠️ Data Structures
 
