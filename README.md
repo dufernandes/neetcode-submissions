@@ -62,7 +62,17 @@ Appears in: Two Sum, Contains Duplicate, Valid Anagram, Group Anagrams, Longest 
 ### Two Pointers
 Place one pointer at each end of a sorted array (or string) and move them inward based on the comparison result. Avoids nested loops.
 
-Appears in: Is Palindrome, Two Sum II, 3Sum.
+Appears in: Is Palindrome, Two Sum II, 3Sum, Trapping Rain Water.
+
+### Sliding Window
+Maintain a window defined by two pointers that expands right and shrinks or resets left based on a condition. Avoids recomputing the full range on every step.
+
+Appears in: Best Time to Buy and Sell Stock.
+
+### Stack
+Use a LIFO structure when the problem involves matching, nesting, or processing elements in reverse order of when they were seen. In Java, prefer `ArrayDeque` over `Stack`.
+
+Appears in: Validate Parentheses.
 
 ### Prefix / Postfix Products
 For each position, the answer depends on everything to its left and everything to its right — computed independently in two passes without using division.
