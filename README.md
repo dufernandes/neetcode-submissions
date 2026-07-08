@@ -39,6 +39,11 @@ Problems are ordered following the [NeetCode 150 Roadmap](https://neetcode.io/pr
 |---|---|---|---|
 | [Best Time to Buy and Sell Stock](https://neetcode.io/problems/buy-and-sell-crypto) | Easy | Sliding Window | [📄](Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/README.md) |
 
+### 🥞 Stack
+| Problem | Difficulty | Pattern | My README |
+|---|---|---|---|
+| [Valid Parentheses](https://neetcode.io/problems/validate-parentheses) | Easy | Stack | [📄](Data%20Structures%20%26%20Algorithms/validate-parentheses/README.md) |
+
 ### 🛠️ Data Structures
 
 | Problem | Difficulty | Pattern | My README |
