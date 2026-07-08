@@ -32,19 +32,21 @@ Problems are ordered following the [NeetCode 150 Roadmap](https://neetcode.io/pr
 | [Two Integer Sum II](https://neetcode.io/problems/two-integer-sum-ii) | Medium | Two Pointers | [📄](Data%20Structures%20%26%20Algorithms/two-integer-sum-ii/README.md) |
 | [Three Integer Sum](https://neetcode.io/problems/three-integer-sum) | Medium | Two Pointers | [📄](Data%20Structures%20%26%20Algorithms/three-integer-sum/README.md) |
 | [Container With Most Water](https://neetcode.io/problems/max-water-container) | Medium | Two Pointers | [📄](Data%20Structures%20%26%20Algorithms/max-water-container/README.md) |
-| [Trapping Rain Water](https://neetcode.io/problems/trapping-rain-water) | Hard | Trapping Rain Water | [📄](Data%20Structures%20%26%20Algorithms/trapping-rain-water/REAME.md) |
+| [Trapping Rain Water](https://neetcode.io/problems/trapping-rain-water) | Hard | Two Pointers | [📄](Data%20Structures%20%26%20Algorithms/trapping-rain-water/README.md) |
 
 ### 🪟 Sliding Window
+
 | Problem | Difficulty | Pattern | My README |
 |---|---|---|---|
 | [Best Time to Buy and Sell Stock](https://neetcode.io/problems/buy-and-sell-crypto) | Easy | Sliding Window | [📄](Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/README.md) |
 
 ### 🥞 Stack
+
 | Problem | Difficulty | Pattern | My README |
 |---|---|---|---|
-| [Valid Parentheses](https://neetcode.io/problems/validate-parentheses) | Easy | Stack | [📄](Data%20Structures%20%26%20Algorithms/validate-parentheses/README.md) |
+| [Validate Parentheses](https://neetcode.io/problems/validate-parentheses) | Easy | Stack | [📄](Data%20Structures%20%26%20Algorithms/validate-parentheses/README.md) |
 
-### 🛠️ Data Structures
+### 🛠️ Data Structures & Algorithms (Fundamentals)
 
 | Problem | Difficulty | Pattern | My README |
 |---|---|---|---|
@@ -62,7 +64,7 @@ Appears in: Two Sum, Contains Duplicate, Valid Anagram, Group Anagrams, Longest 
 ### Two Pointers
 Place one pointer at each end of a sorted array (or string) and move them inward based on the comparison result. Avoids nested loops.
 
-Appears in: Is Palindrome, Two Sum II, 3Sum, Trapping Rain Water.
+Appears in: Is Palindrome, Two Sum II, 3Sum, Container With Most Water, Trapping Rain Water.
 
 ### Sliding Window
 Maintain a window defined by two pointers that expands right and shrinks or resets left based on a condition. Avoids recomputing the full range on every step.
@@ -119,4 +121,9 @@ Every problem README follows the same structure:
 5. **Alternatives** — other valid approaches with tradeoff discussion
 6. **Complexity** — time and space for each approach
 7. **Interview Tips** — what interviewers look for, common mistakes, follow-ups
-8. **Review Log** — date solved and review due date for spaced re-solving
+
+---
+
+## Retention Strategy
+
+Re-solve problems periodically from scratch — no looking at previous solutions. If you can do it, you know it. If you can't, re-learn it from the source.
