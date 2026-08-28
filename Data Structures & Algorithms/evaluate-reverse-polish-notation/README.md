@@ -1,9 +1,9 @@
 # Evaluate Reverse Polish Notation
 
-Difficulty: Medium
-Pattern: Stack
-NeetCode: [Evaluate Reverse Polish Notation](https://neetcode.io/problems/evaluate-reverse-polish-notation)
-LeetCode: [#150 – Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)
+**Difficulty**: Medium  
+**Pattern**: Stack  
+**NeetCode**: [Evaluate Reverse Polish Notation](https://neetcode.io/problems/evaluate-reverse-polish-notation)  
+**LeetCode**: [#150 – Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)  
 
 ---
 
