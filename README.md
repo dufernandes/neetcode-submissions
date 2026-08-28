@@ -45,6 +45,7 @@ Problems are ordered following the [NeetCode 150 Roadmap](https://neetcode.io/pr
 | Problem | Difficulty | Pattern | My README |
 |---|---|---|---|
 | [Validate Parentheses](https://neetcode.io/problems/validate-parentheses) | Easy | Stack | [📄](Data%20Structures%20%26%20Algorithms/validate-parentheses/README.md) |
+| [Minimum Stack](https://neetcode.io/problems/minimum-stack) | Medium | Stack | [📄](Data%20Structures%20%26%20Algorithms/minimum-stack/README.md) |
 
 ### 🛠️ Data Structures & Algorithms (Fundamentals)
 
