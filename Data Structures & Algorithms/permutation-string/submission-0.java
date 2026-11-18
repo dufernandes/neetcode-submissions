@@ -8,7 +8,6 @@ class Solution {
             s1Map.merge(s1.charAt(i), 1, Integer::sum); 
         }
 
-        int counter = 0;
         int right = s1.length() - 1;
         int left = 0;
         while (right <= s2.length() - 1) {
