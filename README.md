@@ -41,6 +41,7 @@ Problems are ordered following the [NeetCode 150 Roadmap](https://neetcode.io/pr
 | [Best Time to Buy and Sell Stock](https://neetcode.io/problems/buy-and-sell-crypto) | Easy | Sliding Window | [📄](Data%20Structures%20%26%20Algorithms/buy-and-sell-crypto/README.md) |
 | [Longest Substring Without Repeating Characters](https://neetcode.io/problems/longest-substring-without-duplicates) | Medium | Sliding Window | [📄](Data%20Structures%20%26%20Algorithms/longest-substring-without-duplicates/README.md) |
 | [Longest Repeating Character Replacement](https://neetcode.io/problems/longest-repeating-substring-with-replacement) | Medium | Sliding Window | [📄](Data%20Structures%20%26%20Algorithms/longest-repeating-substring-with-replacement/README.md) |
+| [Permutation in String](https://neetcode.io/problems/permutation-string) | Medium | Sliding Window | [📄](Data%20Structures%20%26%20Algorithms/permutation-string/README.md) |
 
 ### 🥞 Stack
 
