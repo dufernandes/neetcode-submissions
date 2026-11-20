@@ -52,6 +52,7 @@ Problems are ordered following the [NeetCode 150 Roadmap](https://neetcode.io/pr
 | [Evaluate Reverse Polish Notation](https://neetcode.io/problems/evaluate-reverse-polish-notation) | Medium | Stack | [📄](Data%20Structures%20%26%20Algorithms/evaluate-reverse-polish-notation/README.md) |
 | [Daily Temperatures](https://neetcode.io/problems/daily-temperatures) | Medium | Stack | [📄](Data%20Structures%20%26%20Algorithms/daily-temperatures/README.md) |
 | [Car Fleet](https://neetcode.io/problems/car-fleet) | Medium | Stack | [📄](Data%20Structures%20%26%20Algorithms/car-fleet/README.md) |
+| [Largest Rectangle In Histogram](https://neetcode.io/problems/largest-rectangle-in-histogram) | Hard | Stack | [📄](Data%20Structures%20%26%20Algorithms/largest-rectangle-in-histogram/README.md) |
 
 ### 🛠️ Data Structures & Algorithms (Fundamentals)
 
